@@ -74,6 +74,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="gLP-jW-YDC" kind="show" identifier="showItem" id="Xvk-u0-f0q"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -86,28 +89,28 @@
             </objects>
             <point key="canvasLocation" x="-371.01449275362324" y="193.52678571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="uym-sf-mrW">
             <objects>
-                <viewController id="gLP-jW-YDC" sceneMemberID="viewController">
+                <viewController id="gLP-jW-YDC" customClass="DetailViewController" customModule="SuperContacts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N0N-oZ-NMf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="b1F-Af-Fpz">
-                                <rect key="frame" x="8" y="52" width="398" height="802"/>
+                                <rect key="frame" x="8" y="8" width="398" height="792"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dg6-xd-4aa">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVU-ZK-cSM">
-                                                <rect key="frame" x="0.0" y="0.0" width="45" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="96" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yg3-mQ-LW3">
-                                                <rect key="frame" x="53" y="0.0" width="345" height="34"/>
+                                                <rect key="frame" x="104" y="0.0" width="294" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -117,13 +120,13 @@
                                         <rect key="frame" x="0.0" y="42" width="398" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Universe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBe-AN-LVu">
-                                                <rect key="frame" x="0.0" y="0.0" width="67" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="96" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Td-lw-kYy">
-                                                <rect key="frame" x="75" y="0.0" width="323" height="34"/>
+                                                <rect key="frame" x="104" y="0.0" width="294" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -133,13 +136,13 @@
                                         <rect key="frame" x="0.0" y="84" width="398" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alignment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuC-Nn-1yk">
-                                                <rect key="frame" x="0.0" y="0.0" width="77" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="96" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Web-2f-HlR">
-                                                <rect key="frame" x="85" y="0.0" width="313" height="34"/>
+                                                <rect key="frame" x="104" y="0.0" width="294" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -149,13 +152,13 @@
                                         <rect key="frame" x="0.0" y="126" width="398" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strengths" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29J-Ow-No6">
-                                                <rect key="frame" x="0.0" y="0.0" width="74.5" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="96" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wit-1d-uB3">
-                                                <rect key="frame" x="82.5" y="0.0" width="315.5" height="34"/>
+                                                <rect key="frame" x="104" y="0.0" width="294" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -178,12 +181,18 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwT-j8-3uU">
-                                        <rect key="frame" x="0.0" y="210" width="398" height="592"/>
+                                        <rect key="frame" x="0.0" y="210" width="398" height="582"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="wit-1d-uB3" firstAttribute="leading" secondItem="4KH-dp-Eb6" secondAttribute="leading" id="CfY-In-lla"/>
+                                    <constraint firstItem="yg3-mQ-LW3" firstAttribute="leading" secondItem="6Td-lw-kYy" secondAttribute="leading" id="Eec-9d-LvY"/>
+                                    <constraint firstItem="6Td-lw-kYy" firstAttribute="leading" secondItem="Web-2f-HlR" secondAttribute="leading" id="Tta-z9-haN"/>
+                                    <constraint firstItem="Web-2f-HlR" firstAttribute="leading" secondItem="wit-1d-uB3" secondAttribute="leading" id="dLA-qX-jJO"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T2q-hS-6MB"/>
@@ -195,6 +204,14 @@
                             <constraint firstItem="b1F-Af-Fpz" firstAttribute="leading" secondItem="T2q-hS-6MB" secondAttribute="leading" constant="8" id="kc0-Kn-lOf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="RfD-uP-Scg"/>
+                    <connections>
+                        <outlet property="alignmentField" destination="Web-2f-HlR" id="DXo-xf-9bp"/>
+                        <outlet property="nameField" destination="yg3-mQ-LW3" id="zJ4-k1-iLR"/>
+                        <outlet property="strengthsField" destination="wit-1d-uB3" id="pDj-7m-HeR"/>
+                        <outlet property="universeField" destination="6Td-lw-kYy" id="ONe-cM-Ffa"/>
+                        <outlet property="weaknessesField" destination="4KH-dp-Eb6" id="PhT-XV-TCz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hPy-fc-sPE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

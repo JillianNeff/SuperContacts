@@ -17,6 +17,7 @@
 		BA92322D255DD72200D53F6A /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA92322C255DD72200D53F6A /* ItemsViewController.swift */; };
 		BA923235255DD8AA00D53F6A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA923234255DD8AA00D53F6A /* Item.swift */; };
 		BA92323A255DDA8100D53F6A /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA923239255DDA8100D53F6A /* ItemStore.swift */; };
+		BAA6E3A22560A69F002BCA81 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA6E3A12560A69F002BCA81 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		BA92322C255DD72200D53F6A /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		BA923234255DD8AA00D53F6A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		BA923239255DDA8100D53F6A /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		BAA6E3A12560A69F002BCA81 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				BA92322C255DD72200D53F6A /* ItemsViewController.swift */,
 				BA923234255DD8AA00D53F6A /* Item.swift */,
 				BA923239255DDA8100D53F6A /* ItemStore.swift */,
+				BAA6E3A12560A69F002BCA81 /* DetailViewController.swift */,
 			);
 			path = SuperContacts;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				BA923235255DD8AA00D53F6A /* Item.swift in Sources */,
 				BA92322D255DD72200D53F6A /* ItemsViewController.swift in Sources */,
 				BA9231FA255DD68D00D53F6A /* AppDelegate.swift in Sources */,
+				BAA6E3A22560A69F002BCA81 /* DetailViewController.swift in Sources */,
 				BA92323A255DDA8100D53F6A /* ItemStore.swift in Sources */,
 				BA9231FC255DD68D00D53F6A /* SceneDelegate.swift in Sources */,
 			);

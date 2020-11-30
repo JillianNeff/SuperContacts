@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var nameField: UITextField!
     @IBOutlet var universeField: UITextField!
     @IBOutlet var alignmentField: UITextField!
@@ -24,7 +24,26 @@ class DetailViewController: UIViewController {
         alignmentField.text = item.alignment
         strengthsField.text = item.strengths
         weaknessesField.text = item.weaknesses
-        
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        view.endEditing(true)
+        
+        item.name = nameField.text ?? ""
+        item.universe = universeField.text ?? ""
+        item.alignment = alignmentField.text ?? ""
+        item.strengths = strengthsField.text ?? ""
+        item.weaknesses = weaknessesField.text ?? ""
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
 }

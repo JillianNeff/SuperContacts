@@ -188,7 +188,7 @@
                                     <constraint firstAttribute="height" constant="44" id="FKp-yk-g6L"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Item" id="UZH-Og-M9z"/>
+                                    <barButtonItem systemItem="trash" id="UZH-Og-M9z"/>
                                 </items>
                             </toolbar>
                         </subviews>

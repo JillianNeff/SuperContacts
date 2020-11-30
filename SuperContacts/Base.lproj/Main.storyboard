@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Items View Controller-->
+        <!--Super Contacts-->
         <scene sceneID="tUM-Xb-SAP">
             <objects>
                 <tableViewController id="cJE-Ll-Xpz" customClass="ItemsViewController" customModule="SuperContacts" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,43 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="FEu-kX-Jsj">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxQ-Pk-Ehj">
-                                    <rect key="frame" x="8" y="15" width="195" height="14"/>
-                                    <state key="normal" title="Edit"/>
-                                    <connections>
-                                        <action selector="toggleEditingMode:" destination="cJE-Ll-Xpz" eventType="touchUpInside" id="Ujm-rs-Equ"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plQ-fy-0Kq">
-                                    <rect key="frame" x="211" y="15" width="195" height="14"/>
-                                    <inset key="contentEdgeInsets" minX="0.0" minY="-1" maxX="1" maxY="0.0"/>
-                                    <state key="normal" image="plus" catalog="system"/>
-                                    <connections>
-                                        <action selector="addNewItem:" destination="cJE-Ll-Xpz" eventType="touchUpInside" id="916-29-p4J"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <constraints>
-                                <constraint firstAttribute="bottom" secondItem="oxQ-Pk-Ehj" secondAttribute="bottom" constant="15" id="8TD-tT-ZoF"/>
-                                <constraint firstItem="plQ-fy-0Kq" firstAttribute="centerY" secondItem="FEu-kX-Jsj" secondAttribute="centerY" id="Ieq-IP-GPF"/>
-                                <constraint firstItem="plQ-fy-0Kq" firstAttribute="top" secondItem="FEu-kX-Jsj" secondAttribute="top" constant="15" id="N2r-wV-2vb"/>
-                                <constraint firstItem="plQ-fy-0Kq" firstAttribute="width" secondItem="oxQ-Pk-Ehj" secondAttribute="width" id="T4t-zI-siX"/>
-                                <constraint firstItem="oxQ-Pk-Ehj" firstAttribute="centerY" secondItem="FEu-kX-Jsj" secondAttribute="centerY" id="diO-xv-YbD"/>
-                                <constraint firstAttribute="trailing" secondItem="plQ-fy-0Kq" secondAttribute="trailing" constant="8" id="gJ8-fn-S9g"/>
-                                <constraint firstItem="plQ-fy-0Kq" firstAttribute="leading" secondItem="oxQ-Pk-Ehj" secondAttribute="trailing" constant="8" id="pew-Ai-RDd"/>
-                                <constraint firstAttribute="bottom" secondItem="plQ-fy-0Kq" secondAttribute="bottom" constant="15" id="tzl-bX-ZXc"/>
-                                <constraint firstItem="oxQ-Pk-Ehj" firstAttribute="leading" secondItem="FEu-kX-Jsj" secondAttribute="leading" constant="8" id="xrT-DP-sn1"/>
-                                <constraint firstItem="oxQ-Pk-Ehj" firstAttribute="top" secondItem="FEu-kX-Jsj" secondAttribute="top" constant="15" id="yCZ-Gg-geg"/>
-                            </constraints>
-                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="RDa-mo-5UA" detailTextLabel="p9w-Vb-3O8" style="IBUITableViewCellStyleSubtitle" id="EYt-oX-uKR">
-                                <rect key="frame" x="0.0" y="72" width="414" height="55.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EYt-oX-uKR" id="iDq-Mv-a3N">
                                     <rect key="frame" x="0.0" y="0.0" width="383" height="55.5"/>
@@ -84,7 +50,13 @@
                             <outlet property="delegate" destination="cJE-Ll-Xpz" id="FAu-yF-rD8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ClF-wa-IJj"/>
+                    <navigationItem key="navigationItem" title="Super Contacts" id="ClF-wa-IJj">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zW0-Va-ieK">
+                            <connections>
+                                <action selector="addNewItem:" destination="cJE-Ll-Xpz" id="7vf-XB-zcl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dae-Ew-s3f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -238,7 +210,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -71,7 +71,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="b1F-Af-Fpz">
-                                <rect key="frame" x="8" y="96" width="398" height="758"/>
+                                <rect key="frame" x="8" y="96" width="398" height="714"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dg6-xd-4aa">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="34"/>
@@ -169,7 +169,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwT-j8-3uU">
-                                        <rect key="frame" x="0.0" y="210" width="398" height="548"/>
+                                        <rect key="frame" x="0.0" y="210" width="398" height="504"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -182,15 +182,27 @@
                                     <constraint firstItem="Web-2f-HlR" firstAttribute="leading" secondItem="wit-1d-uB3" secondAttribute="leading" id="dLA-qX-jJO"/>
                                 </constraints>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4V3-bC-FIk">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="FKp-yk-g6L"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Item" id="UZH-Og-M9z"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T2q-hS-6MB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="b1F-Af-Fpz" firstAttribute="top" secondItem="T2q-hS-6MB" secondAttribute="top" constant="8" id="3aW-4U-CWp"/>
+                            <constraint firstItem="4V3-bC-FIk" firstAttribute="bottom" secondItem="T2q-hS-6MB" secondAttribute="bottom" id="AvF-lg-wSd"/>
                             <constraint firstItem="T2q-hS-6MB" firstAttribute="trailing" secondItem="b1F-Af-Fpz" secondAttribute="trailing" constant="8" id="Cgg-ag-Jpc"/>
-                            <constraint firstItem="T2q-hS-6MB" firstAttribute="bottom" secondItem="b1F-Af-Fpz" secondAttribute="bottom" constant="8" id="bai-F3-dv3"/>
+                            <constraint firstItem="4V3-bC-FIk" firstAttribute="trailing" secondItem="T2q-hS-6MB" secondAttribute="trailing" id="Dni-eU-lW8"/>
+                            <constraint firstItem="4V3-bC-FIk" firstAttribute="top" secondItem="b1F-Af-Fpz" secondAttribute="bottom" constant="8" id="efU-hg-kbF"/>
                             <constraint firstItem="b1F-Af-Fpz" firstAttribute="leading" secondItem="T2q-hS-6MB" secondAttribute="leading" constant="8" id="kc0-Kn-lOf"/>
+                            <constraint firstItem="4V3-bC-FIk" firstAttribute="leading" secondItem="T2q-hS-6MB" secondAttribute="leading" id="rCk-wx-zgd"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="1oE-6w-QxN" appends="YES" id="YzH-Q5-5cr"/>

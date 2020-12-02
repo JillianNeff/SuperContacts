@@ -23,9 +23,18 @@ class ItemStore {
     }
     
     init() {
-        for _ in 0..<12 {
-            createItem()
+        do {
+            let data = try Data(contentsOf: itemArchiveURL)
+            let unarchiver = PropertyListDecoder()
+            let items = try unarchiver.decode([Item].self, from: data)
+            allItems = items
+        } catch{
+            print("Error reading in saved items: \(error)")
         }
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self,
+                                       selector: #selector(saveChanges),
+                                       name: UIScene.didEnterBackgroundNotification, object: nil)
     }
     
     func removeItem(_ item: Item) {
@@ -34,7 +43,7 @@ class ItemStore {
         }
     }
     
-    func saveChanges() -> Bool {
+    @objc func saveChanges() -> Bool {
         do {
             let encoder = PropertyListEncoder()
             let data = try encoder.encode(allItems)

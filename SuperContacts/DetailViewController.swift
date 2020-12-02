@@ -50,4 +50,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
+    
+    
+    @IBAction func deleteContact(_ sender: Any) {
+        
+    }
+    
+    
 }

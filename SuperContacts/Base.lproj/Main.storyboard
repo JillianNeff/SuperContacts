@@ -190,7 +190,7 @@
                                 <items>
                                     <barButtonItem systemItem="trash" id="UZH-Og-M9z">
                                         <connections>
-                                            <action selector="deleteContact:" destination="gLP-jW-YDC" id="CwF-Cd-rrY"/>
+                                            <action selector="deleteContact:" destination="gLP-jW-YDC" id="VTd-GV-jZU"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>

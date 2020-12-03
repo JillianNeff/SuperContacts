@@ -52,7 +52,24 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    @IBAction func deleteContact(_ sender: Any) {
+    @IBAction func deleteContact(_ sender: UIBarItem) {
+        let title = "Delete \(item.name)?"
+        let message = "Are you sure you want to delete this item?"
+        
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        ac.addAction(cancelAction)
+        
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: {(action) -> Void in
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let itemStore = appDelegate.itemStore
+            itemStore.removeItem(self.item)
+        })
+        
+        ac.addAction(deleteAction)
+        
+        present(ac, animated: true, completion: nil)
         
     }
     
